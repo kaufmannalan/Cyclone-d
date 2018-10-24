@@ -1,8 +1,9 @@
 public class Main {
 
+    public static double distanceTotal;
+
     public static void main(String[] args) {
-        // write your code here
-        double distanceTotal = distanceCalc(25, -15, 23, -20); //1-2
+        distanceTotal = distanceCalc(25, -15, 23, -20); //1-2
         distanceTotal += distanceCalc(23, -20, 21, -24); //2-3
         distanceTotal += distanceCalc(21, -24, 20, -27); //3-4
         distanceTotal += distanceCalc(20, -27, 19, -35); //4-5
@@ -11,9 +12,9 @@ public class Main {
         distanceTotal += distanceCalc(28, -56, 25, -65); //7-8
         distanceTotal += distanceCalc(25, -65, 28, -70); //8-9
         distanceTotal += distanceCalc(28, -70, 32, -73); //9-10
-        distanceTotal += distanceCalc(32, -73, 34, -74); //10-11
-        distanceTotal += distanceCalc(34, -74, 36, -73); //11-12
-        distanceTotal += distanceCalc(36, -73, 39, -73); //12-13
+        distanceTotal += distanceCalc(32, -74 , 34, -74); //10-11
+        distanceTotal += distanceCalc(34, -74, 36, -74); //11-12
+        distanceTotal += distanceCalc(36, -74, 39, -74); //12-13
         System.out.printf("The hurricane travelled %f kilometers.", distanceTotal);
     }
 
@@ -26,6 +27,4 @@ public class Main {
         double c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
         return 6371 * c; //km
     }
-
-}
 
